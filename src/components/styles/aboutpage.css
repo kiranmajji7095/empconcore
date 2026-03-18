@@ -1,0 +1,337 @@
+/* =============================
+   MAIN WRAPPER
+============================= */
+.about-wrapper {
+  background: #f6f2ff;
+  font-family: "Poppins", sans-serif;
+  padding: 40px 60px;
+  overflow-x: hidden;
+}
+
+/* =============================
+   HERO SECTION
+============================= */
+.about-hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+
+.about-hero-content {
+  max-width: 50%;
+}
+.about-section-title1{
+   font-size: 28px;
+  font-weight: 700;
+  color: #4b0bdf;
+  padding-left: 42%;
+}
+.about-section-subtext{
+  width: 900px;
+  padding-left: 15%;
+  margin-bottom: 35px;
+}
+.about-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #4b0bdf;
+  align-items: center;
+  /* height: 250px; */
+}
+
+.about-subtitle {
+  /* margin-top: 15px; */
+  font-size: 18px;
+  color: #555;
+  max-width: 440px;
+  /* line-height: 1.6; */
+}
+
+.about-hero-btn {
+  margin-top: 25px;
+  padding: 14px 28px;
+  font-size: 15px;
+  background: linear-gradient(120deg, #530df7, #7d40ff);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.about-hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(83, 13, 247, 0.3);
+}
+
+/* HERO IMAGE */
+.about-hero-graphic {
+  max-width: 420px;
+}
+
+.about-hero-img {
+  width: 100%;
+  object-fit: contain;
+  animation: float 3s infinite ease-in-out;
+  border-radius: 10px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* =============================
+   INFO SECTION
+============================= */
+.about-info-section {
+  margin-top: 80px;
+}
+
+.about-section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4b0bdf;
+  margin-bottom: 18px;
+}
+
+.about-section-text {
+  font-size: 16px;
+  color: #444;
+  max-width: 680px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  padding-left: 250px;
+}
+
+/* =============================
+   CARDS GRID
+============================= */
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* 🟣 FULLY UPGRADED COLOR CARDS */
+.about-card {
+  background: #ffffff;
+  padding: 22px 22px 22px 28px; /* extra left padding */
+  border-radius: 14px;
+  box-shadow: 0px 10px 28px rgba(83, 13, 247, 0.12);
+  border-left: 6px solid transparent;
+  position: relative;
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+/* Left accent color */
+.about-card:nth-child(1) {
+  border-left-color: #530df7;
+}
+.about-card:nth-child(2) {
+  border-left-color: #ff7d29;
+}
+.about-card:nth-child(3) {
+  border-left-color: #15b2ff;
+}
+
+/* Hover glow */
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 16px 36px rgba(83, 13, 247, 0.2);
+}
+
+/* Glow overlay */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 120px;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(83, 13, 247, 0.18),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.about-card:hover::before {
+  opacity: 1;
+}
+
+.about-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* =============================
+   VISION SECTION
+============================= */
+.about-vision-section {
+  margin-top: 80px;
+  text-align: center;
+  padding: 40px;
+  background: #f0e9ff;
+  border-radius: 16px;
+}
+
+/* =============================
+   FEATURES GRID
+============================= */
+.about-features-list {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.about-feature-item {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(83, 13, 247, 0.08);
+  font-weight: 600;
+}
+
+/* =============================
+   ANIMATIONS
+============================= */
+.animate-fade {
+  animation: fadeIn 0.8s ease-in-out both;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.9s ease both;
+}
+
+.animate-fade-late {
+  animation: fadeIn 1.3s ease both;
+}
+
+.animate-pop {
+  animation: popIn 0.6s ease both;
+}
+
+.animate-slide {
+  animation: slideIn 0.9s ease both;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+/* =============================
+   MOBILE VIEW ONLY (FORCE FIX)
+============================= */
+@media screen and (max-width: 768px) {
+
+  /* WRAPPER */
+  .about-wrapper {
+    padding: 20px 14px !important;
+  }
+
+  /* HERO */
+  .about-hero-section {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .about-hero-content {
+    max-width: 100% !important;
+  }
+
+  .about-title {
+    font-size: 30px !important;
+  }
+
+  .about-subtitle {
+    max-width: 100% !important;
+    font-size: 14px !important;
+  }
+
+  .about-hero-btn {
+    width: 100% !important;
+  }
+
+  /* HERO IMAGE */
+  .about-hero-graphic {
+    max-width: 260px !important;
+    margin: auto !important;
+  }
+
+  /* FIX HARD CODED CENTERING */
+  .about-section-title1 {
+    padding-left: 0 !important;
+    text-align: center !important;
+    font-size: 22px !important;
+  }
+
+  .about-section-subtext {
+    width: 100% !important;
+    padding-left: 0 !important;
+    text-align: center !important;
+    font-size: 14px !important;
+  }
+
+  .about-section-text {
+    padding-left: 0 !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    font-size: 14px !important;
+  }
+
+  /* CARDS */
+  .about-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* FEATURES */
+  .about-features-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media screen and (max-width: 480px) {
+
+  .about-title {
+    font-size: 26px !important;
+  }
+
+  .about-hero-graphic {
+    max-width: 220px !important;
+  }
+}
+
+.about-section-subtext{
+  margin-left: 200px;
+}
+.about-section-text{
+  margin-left: 200px;
+}

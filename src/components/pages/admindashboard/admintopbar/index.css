@@ -1,0 +1,77 @@
+.admin-topbar {
+  height: 64px;
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 22px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.admin-topbar-left h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.admin-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.admin-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-email {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.admin-logout-btn {
+  background: #fff;
+  color: #a855f7;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.admin-logout-btn:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+@media (max-width: 768px) {
+  .admin-user-info {
+    display: none;
+  }
+
+  .admin-topbar {
+    padding: 0 14px;
+  }
+}

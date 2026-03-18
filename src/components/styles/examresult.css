@@ -1,0 +1,111 @@
+/* ===============================
+   EXAM RESULT WRAPPER
+================================ */
+.examresult-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  background: #f4f6fb;
+  min-height: calc(100vh - 80px);
+  font-family: "Inter", sans-serif;
+}
+
+/* ===============================
+   CARD
+================================ */
+.examresult-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 30px 34px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  animation: examresultFade 0.4s ease-in-out;
+}
+
+/* ===============================
+   TITLE
+================================ */
+.examresult-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* ===============================
+   ROWS
+================================ */
+.examresult-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.examresult-row:last-child {
+  border-bottom: none;
+}
+
+/* ===============================
+   LABEL & VALUE
+================================ */
+.examresult-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.examresult-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* ===============================
+   STATUS
+================================ */
+.examresult-status {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.examresult-pass {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.examresult-fail {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ===============================
+   LOADING TEXT
+================================ */
+.examresult-loading {
+  text-align: center;
+  font-size: 16px;
+  color: #4b5563;
+  margin-top: 40px;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes examresultFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

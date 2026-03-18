@@ -1,0 +1,113 @@
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Card */
+.popup-card {
+  width: 460px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.popup-card h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+  color: #222;
+}
+
+/* Inputs */
+.popup-card input,
+.popup-card select,
+.popup-card textarea {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 14px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.popup-card input:focus,
+.popup-card select:focus,
+.popup-card textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Textarea */
+.popup-card textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Actions */
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.btn-save {
+  padding: 10px 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background: #1e4ed8;
+}
+
+.btn-cancel {
+  padding: 10px 20px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* ===============================
+   PROFILE POPUP – MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  .popup-card {
+    width: 92% !important;
+    padding: 20px !important;
+  }
+
+  .popup-card h3 {
+    font-size: 18px !important;
+  }
+
+  .popup-card input,
+  .popup-card select,
+  .popup-card textarea {
+    font-size: 14px;
+  }
+
+  .popup-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    width: 100%;
+  }
+}

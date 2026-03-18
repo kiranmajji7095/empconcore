@@ -1,0 +1,438 @@
+/* ROOT */
+.pc-root {
+  padding: 32px;
+  height: 60vh;
+  background: linear-gradient(180deg, #f4f6fc, #eaeefe);
+  font-family: "Poppins", sans-serif;
+  overflow-y: auto;
+
+  scrollbar-width: none;        
+  -ms-overflow-style: none;     
+}
+.pc-root::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+
+.pc-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+}
+
+/* CARD BASE */
+.pc-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 22px; /* ✅ Added spacing between cards */
+  box-shadow: 0 8px 28px rgba(34, 0, 79, 0.07);
+  transition: 0.25s ease;
+}
+
+.pc-card:first-child {
+  margin-top: 0; /* Prevents extra gap on the top card */
+}
+
+.pc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(34, 0, 79, 0.10);
+}
+
+/* HEADER */
+.pc-header {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.pc-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(83, 13, 247, 0.18);
+}
+
+.pc-person {
+  flex: 1;
+}
+
+.pc-name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #242556;
+}
+
+.pc-role {
+  margin: 4px 0;
+  color: #74789b;
+  font-size: 14px;
+}
+
+.pc-applied {
+  margin: 4px 0;
+  color: #565875;
+  font-size: 14px;
+}
+
+/* META */
+.pc-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.pc-status {
+  padding: 6px 16px;
+  background: linear-gradient(120deg, #6d40ff, #530df7);
+  color: #fff;
+  font-size: 13px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.pc-score {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid rgba(83, 13, 247, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  font-weight: 700;
+  color: #530df7;
+}
+
+/* TABS */
+.pc-tabs {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5ef;
+}
+
+.pc-tab {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pc-tab-active {
+  background: linear-gradient(120deg, #530df7, #3b00c9);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(83, 13, 247, 0.22);
+}
+
+/* FLEX */
+.pc-flex {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  margin-top: 22px; /* spacing inside card */
+}
+
+/* RATING */
+.pc-rate-box {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pc-rate-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid rgba(83, 13, 247, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #faf7ff;
+}
+
+.pc-rate-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: #530df7;
+}
+
+/* RANGE */
+.pc-rate-slider {
+  flex: 1;
+}
+
+.pc-range {
+  width: 100%;
+  height: 7px;
+  border-radius: 8px;
+  background: #d8d4ff;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.pc-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #530df7;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(83, 13, 247, 0.45);
+}
+
+.pc-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 6px;
+  color: #777;
+}
+
+/* SKILLS */
+.pc-skill-col {
+  flex: 1;
+  display: grid;
+  gap: 16px;
+}
+
+.pc-skill-card {
+  background: #f8f7ff;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #e8e5ff;
+}
+
+.pc-skill-title {
+  margin: 0 0 6px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #2d2b55;
+}
+
+.pc-stars {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.pc-star {
+  color: #c9c9d4;
+}
+
+.pc-star-on {
+  color: #530df7;
+}
+
+.pc-skill-note {
+  font-size: 13px;
+  color: #666;
+}
+
+/* GRID 2 */
+.pc-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 22px; /* added gap between sections */
+}
+
+/* RECOMMENDATION */
+.pc-reco {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px; /* added spacing */
+}
+
+/* BUTTONS */
+.pc-reco-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* SIDEBAR */
+.pc-side-card {
+  position: sticky;
+  top: 40px;
+  margin-top: 22px; /* sidebar card spacing */
+}
+
+.pc-side-card:first-child {
+  margin-top: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pc-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .pc-flex {
+    flex-direction: column;
+  }
+
+  .pc-reco {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+/* SIDEBAR WRAPPER */
+.pc-side {
+  width: 100%;
+}
+
+/* CARD BOX */
+.pc-side-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(34, 0, 79, 0.07);
+  position: sticky;
+  top: 40px;
+  margin-top: 20px;        /* <<< adds gap between cards */
+}
+
+/* TITLE */
+.pc-side-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #2e2b58;
+}
+
+/* STAGE LIST */
+.pc-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;      /* gap between each stage */
+}
+
+/* STAGE ITEM */
+.pc-stage-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* STAGE NUMBER CIRCLE */
+.pc-stage-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(83, 13, 247, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #530df7;
+  background: #f6f3ff;
+}
+
+/* ACTIVE STAGE */
+.pc-stage-circle.pc-active {
+  background: linear-gradient(120deg, #530df7, #3b00c9);
+  color: #fff;
+  border: none;
+}
+
+/* CURRENT STAGE TEXT */
+.pc-current {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* DIVIDER LINE */
+.pc-divider {
+  height: 1px;
+  background: #e0e0eb;
+  margin: 20px 0;
+}
+
+/* LABEL */
+.pc-field-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* SELECT BOX */
+.pc-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #d9d9ef;
+  outline: none;
+  font-size: 14px;
+  color: #444;
+  background: #fff;
+}
+/* BUTTON GROUP WRAPPER */
+.pc-reco-actions {
+  display: flex;
+  gap: 14px;         /* spacing between buttons */
+  margin-top: 20px;  /* adds vertical space */
+}
+
+/* BASE BUTTON STYLE */
+.pc-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  border: 2px solid #ddd;
+  background: #fff;
+  color: #444;
+  transition: 0.25s ease;
+}
+
+/* REJECT BUTTON */
+.pc-btn-reject {
+  color: #444;
+  border-color: #d8d8d8;
+}
+
+.pc-btn-reject:hover {
+  background: #f5f5f5;
+}
+
+/* INVITE BUTTON */
+.pc-btn-green {
+  color: #17a348;
+  border-color: rgba(23, 163, 72, 0.25);
+}
+
+.pc-btn-green:hover {
+  background: rgba(23, 163, 72, 0.08);
+}
+
+/* PROCEED (PRIMARY) BUTTON */
+.pc-btn-main {
+  background: linear-gradient(120deg, #530df7, #3b00c9);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.pc-btn-main:hover {
+  box-shadow: 0 8px 20px rgba(83, 13, 247, 0.3);
+  transform: translateY(-2px);
+}

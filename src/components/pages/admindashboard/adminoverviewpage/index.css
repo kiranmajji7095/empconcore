@@ -1,0 +1,264 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  --primary: #2563eb;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+
+  --bg: #f1f5f9;
+  --card-bg: #ffffff;
+
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+}
+
+/* =========================
+   MAIN
+========================= */
+.admin-main {
+  padding: 30px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.admin-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+/* =========================
+   KPI CARDS (DESIGN UNCHANGED)
+========================= */
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.admin-card {
+  min-height: 150px;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* circle decoration stays */
+.admin-card::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  top: -40px;
+  right: -40px;
+  background: rgba(37, 99, 235, 0.1);
+background-color:#cbbeeb;
+}
+
+/* text */
+.card-label {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-value {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* COLORS ONLY FOR TEXT */
+.total-card .card-value {
+  color: var(--primary);
+}
+
+.passed-card .card-value {
+  color: var(--success);
+}
+
+.failed-card .card-value {
+  color: var(--danger);
+}
+
+.violation-card .card-value {
+  color: var(--warning);
+}
+
+/* =========================
+   TABLE
+========================= */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 14px;
+}
+
+.admin-table-head th {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+  padding: 16px;
+}
+
+.admin-table-row {
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.admin-table-row td {
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.cell-status {
+  font-weight: 700;
+  color: black;
+}
+
+.status-pass {
+  color: var(--success);
+}
+
+.status-fail {
+  color: var(--danger);
+}
+
+.no-records {
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+}
+.cell-email{
+  color: #020407;
+  font-weight: bold;
+}
+/* =========================
+   TABLE
+========================= */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 14px;
+}
+
+.admin-table-head th {
+  font-size: 16px;
+  font-weight: 800;
+  color: #000000;
+  padding: 16px;
+}
+
+/* ROW */
+.admin-table-row {
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* CELL – BOLD BLACK */
+.admin-table-row td {
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 700;          /* ✅ bold */
+  color: #000000;            /* ✅ black */
+}
+.admin-card {
+  cursor: pointer;
+}
+
+.admin-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Status */
+.cell-status {
+  font-weight: 800;
+}
+
+.status-pass {
+  color: var(--success);
+}
+
+.status-fail {
+  color: var(--danger);
+}
+
+/* No records */
+.no-records {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+.admin-pagination {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pagination-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #e5e7eb;
+}
+
+.pagination-btn.active,
+.pagination-btn:hover:not(:disabled) {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.4;
+}
+
+/* =========================
+   LOADING
+========================= */
+.admin-loading {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .admin-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-title {
+    font-size: 24px;
+  }
+}

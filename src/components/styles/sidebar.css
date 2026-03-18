@@ -1,0 +1,115 @@
+/* ===============================
+   SIDEBAR WRAPPER
+================================ */
+.db-sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background:#4488c7;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px 18px;
+  /* height: 150px; */
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.3s ease;
+}
+
+/* ===============================
+   LOGO
+================================ */
+.db-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.db-logo-icon {
+  background: #ffffff;
+  color: #160101;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.db-logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* ===============================
+   MENU LIST
+================================ */
+.db-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===============================
+   MENU ITEM
+================================ */
+.db-menu-item {
+  padding: 12px 16px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover animation */
+.db-menu-item:hover {
+  background: #e0e7ff;
+  transform: translateX(4px);
+  color: #01417c;
+  font-weight: bold;
+}
+
+/* ===============================
+   ACTIVE ITEM
+================================ */
+.db-active {
+  background:#ffffff;
+  color: #438bc7;
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+  font-weight: bold;
+}
+
+/* ===============================
+   ADMIN ITEM
+================================ */
+.db-admin {
+  background: #fee2e2;
+  color: #991b1b;
+  font-weight: 600;
+}
+
+.db-admin:hover {
+  background: #fecaca;
+}
+
+/* ===============================
+   MOBILE SLIDE ANIMATION
+================================ */
+@media (max-width: 768px) {
+  .db-sidebar {
+    position: fixed;
+    top: 0;
+    left: -240px;
+    z-index: 200;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+  }
+
+  .db-sidebar-open {
+    left: 0;
+  }
+}
