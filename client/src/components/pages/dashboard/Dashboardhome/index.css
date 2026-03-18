@@ -1,0 +1,149 @@
+/* ===============================
+   DASHBOARD HOME
+================================ */
+
+.dashboard-home {
+  width: 100%;
+  padding: 20px;
+  /* margin: 50px auto; */
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.dashboard-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.dashboard-email {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  /* padding-top: 30px; */
+  margin-top: 20px;
+}
+
+.dashboard-btn {
+  background: linear-gradient(135deg,#530df7,#530df7);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 15px;
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(255, 122, 24, 0.35);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .dashboard-home {
+    padding: 16px;
+  }
+
+  .dashboard-title {
+    font-size: 22px;
+  }
+
+  .dashboard-btn {
+    width: 100%;
+  }
+}
+/* ===============================
+   DASHBOARD HOME – MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  .dashboard-home {
+    padding: 16px !important;
+  }
+
+  .dashboard-title {
+    font-size: 22px !important;
+  }
+
+  .dashboard-email {
+    font-size: 14px !important;
+  }
+
+  .dashboard-btn {
+    width: 100% !important;
+    font-size: 14px;
+  }
+}
+/* ===============================
+   DASHBOARD TOP LAYOUT
+================================ */
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* ===============================
+   RIGHT SIDE BELL
+================================ */
+
+.dashboard-right {
+  position: relative;
+}
+
+.bell-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.bell-icon:hover {
+  transform: scale(1.1);
+}
+
+/* ===============================
+   NOTIFICATION POPUP
+================================ */
+
+.notification-popup {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 260px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  padding: 15px;
+  z-index: 1000;
+}
+
+.notification-popup h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+  color: #333;
+}
+
+.notification-popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-popup li {
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f1f1;
+  color: #555;
+}
+
+.notification-popup li:last-child {
+  border-bottom: none;
+}

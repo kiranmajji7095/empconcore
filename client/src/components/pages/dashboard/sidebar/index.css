@@ -1,0 +1,147 @@
+/* ===============================
+   SIDEBAR BASE
+================================ */
+.us-sidebar {
+  width: 230px;
+  min-height: 100vh;
+  padding: 24px 18px;
+
+  background: linear-gradient(
+    180deg,
+    #ec4899,
+    #d946ef,
+    #a855f7
+  );
+
+  color: #ffffff;
+  animation: slideInLeft 0.6s ease;
+}
+
+/* ===============================
+   LOGO
+================================ */
+.us-logo {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+/* ===============================
+   NAV LIST
+================================ */
+.us-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===============================
+   NAV ITEM
+================================ */
+.us-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+.us-icon {
+  font-size: 18px;
+}
+
+/* HOVER */
+.us-nav-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(6px);
+}
+
+/* ACTIVE */
+.us-nav-active {
+  background: #ffffff;
+  color: #a855f7;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(253, 251, 251, 0.15);
+}
+
+/* ===============================
+   ENTRY ANIMATION
+================================ */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   MOBILE VIEW
+================================ */
+@media (max-width: 768px) {
+  .us-sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 12px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: linear-gradient(
+      90deg,
+      #ec4899,
+      #d946ef,
+      #a855f7
+    );
+  }
+
+  .us-logo {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .us-nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  .us-nav-item {
+    margin-bottom: 0;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .us-nav-item:hover {
+    transform: none;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL
+================================ */
+@media (max-width: 480px) {
+  .us-nav-item {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}

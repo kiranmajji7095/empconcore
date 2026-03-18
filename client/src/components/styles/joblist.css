@@ -1,0 +1,274 @@
+/* MAIN CONTAINER */
+.joblist-container {
+  padding: 20px;
+  background: #f4f8ff;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* ------------ BANNER + ANIMATION ------------ */
+
+.joblist-banner {
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 10px 0 30px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
+  position: relative;
+}
+
+.joblist-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.5s ease;
+}
+.joblist-banner-img:hover {
+  transform: scale(1.03);
+  filter: brightness(0.95);
+}
+
+.joblist-banner-text {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  animation: slideIn 1.2s ease forwards;
+}
+
+@keyframes slideIn {
+  from {transform: translateX(-80px); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+
+.animate-banner {
+  animation: fadeSlide 1.4s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------ SEARCH BAR ------------ */
+
+.joblist-topbar {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.joblist-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  width: 180px;
+}
+.joblist-applyfilter-btn {
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.joblist-applyfilter-btn:hover {
+  background: #003680;
+}
+
+/* ------------ LAYOUT ------------ */
+
+.joblist-body {
+  display: flex;
+  gap: 25px;
+}
+
+/* ------------ SIDEBAR FILTERS ------------ */
+
+.joblist-sidebar {
+  width: 220px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 20px;
+  border-left: 4px solid #530df7;
+}
+.joblist-sidebar h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #004aad;
+  font-weight: bold;
+  text-align: center;
+}
+.joblist-sidebar h4 {
+  margin: 18px 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+.joblist-sidebar label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.joblist-clear-btn {
+  background: #530df7;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.joblist-clear-btn:hover {
+  background: #3b07b6;
+  transform: scale(1.03);
+}
+
+/* ------------ JOB CARDS ------------ */
+
+.joblist-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.joblist-card {
+  width: 48%;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+.joblist-delete {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.joblist-desc {
+  color: #444;
+  margin-top: 10px;
+}
+.joblist-full {
+  color: red;
+  font-weight: bold;
+}
+.joblist-apply-btn {
+  width: 100%;
+  background: #530df7;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s ease-in-out;
+}
+.joblist-apply-btn:hover {
+  background: #3a10a8;
+}
+
+/* ------------ PAGINATION ------------ */
+
+.joblist-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+.joblist-page-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: white;
+  border: 1px solid #004aad;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.joblist-page-btn:hover {
+  background: #004aad;
+  color: white;
+}
+.joblist-page-btn.active {
+  background: #004aad;
+  color: white;
+}
+
+/* ------------ EMPTY STATE ------------ */
+
+.joblist-noresult {
+  padding: 30px;
+  text-align: center;
+  color: #444;
+}
+/* ===============================
+   JOB LIST – MOBILE VIEW
+================================ */
+@media (max-width: 768px) {
+
+  .joblist-container {
+    padding: 14px;
+  }
+
+  .joblist-banner {
+    height: 220px;
+    margin-bottom: 20px;
+  }
+
+  .joblist-banner-text {
+    font-size: 16px;
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .joblist-topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .joblist-input {
+    width: 100%;
+  }
+
+  .joblist-body {
+    flex-direction: column;
+  }
+
+  .joblist-sidebar {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .joblist-grid {
+    flex-direction: column;
+  }
+
+  .joblist-card {
+    width: 100%;
+  }
+
+  .joblist-pagination {
+    flex-wrap: wrap;
+  }
+}

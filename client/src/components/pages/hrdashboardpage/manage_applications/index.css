@@ -1,0 +1,111 @@
+.manage-container {
+  padding: 30px;
+}
+
+.manage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.manage-back-btn {
+  background: transparent;
+  border: 1px solid #4338ca;
+  color: #4338ca;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.manage-filter {
+  margin-bottom: 16px;
+}
+
+.manage-filter-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #c7d2fe;
+}
+
+.manage-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.manage-table-head th {
+  background: #f1f5f9;
+  padding: 10px;
+  text-align: left;
+}
+
+.manage-table-body td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.manage-empty {
+  text-align: center;
+  padding: 20px;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.APPLIED { background: #e0e7ff; color: #4338ca; }
+.status-badge.SHORTLISTED { background: #cffafe; color: #0369a1; }
+.status-badge.INTERVIEW { background: #fef3c7; color: #92400e; }
+.status-badge.PASS { background: #dcfce7; color: #166534; }
+.status-badge.REJECTED { background: #fee2e2; color: #991b1b; }
+
+.status-select {
+  padding: 6px;
+  border-radius: 6px;
+}
+.delete-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+/* ===============================
+   MANAGE APPLICATIONS – MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  .manage-container {
+    padding: 16px;
+  }
+
+  .manage-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .manage-filter-select {
+    width: 100%;
+  }
+
+  .manage-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .manage-table th,
+  .manage-table td {
+    font-size: 13px;
+  }
+}

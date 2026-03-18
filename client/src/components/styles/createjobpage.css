@@ -1,0 +1,326 @@
+/* PAGE WRAPPER */
+.cj2-wrapper {
+  background: #f4f1ff;
+  min-height: 100vh;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* PAGE TITLE */
+.cj2-heading {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+/* MAIN GRID */
+.cj2-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* LEFT FORM CARD */
+.cj2-form-card {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 28px rgba(83, 13, 247, 0.15);
+}
+
+/* FORM LABEL */
+.cj2-label {
+  margin-top: 18px;
+  display: block;
+  font-weight: 600;
+}
+
+/* INPUT + TEXTAREA + SELECT */
+.cj2-input,
+.cj2-textarea,
+.cj2-select {
+  width: 100%;
+  padding: 13px;
+  margin-top: 8px;
+  border: 2px solid #d8caff;
+  border-radius: 14px;
+  font-size: 14px;
+  transition: 0.3s ease;
+  background: #faf9ff;
+}
+
+.cj2-input:focus,
+.cj2-textarea:focus,
+.cj2-select:focus {
+  border-color: #530df7;
+  box-shadow: 0 0 6px rgba(83, 13, 247, 0.4);
+}
+
+/* TEXTAREA */
+.cj2-textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* DYNAMIC SKILLS */
+.cj2-skill-box {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cj2-skill-tag {
+  background: #530df7;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 14px;
+  font-size: 12px;
+}
+
+/* BUTTON ROW */
+.cj2-btn-row {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.cj2-draft-btn {
+  background: #e4d4ff;
+  color: #530df7;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.cj2-publish-btn {
+  background: #530df7;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cj2-publish-btn:hover {
+  background: #4200d4;
+  transform: translateY(-2px);
+}
+
+/* RIGHT PREVIEW */
+.cj2-preview-card {
+  width: 350px;
+}
+
+.cj2-preview-title {
+  font-size: 18px;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+/* PREVIEW JOB BOX */
+.cj2-preview-box {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0px 12px 25px rgba(83, 13, 247, 0.15);
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.cj2-preview-box:hover {
+  transform: translateY(-4px);
+}
+
+.cj2-preview-job-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* STATUS BADGE */
+.cj2-status-badge {
+  background: #530df7;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 12px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 12px;
+}
+
+.cj2-preview-text {
+  margin-top: 6px;
+  color: #666;
+}
+
+.cj2-preview-app {
+  margin-top: 8px;
+}
+
+/* PREVIEW ICONS */
+.cj2-preview-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.cj2-preview-icons span {
+  cursor: pointer;
+  font-size: 19px;
+  transition: 0.2s;
+}
+
+.cj2-preview-icons span:hover {
+  color: #530df7;
+  transform: scale(1.2);
+}
+
+/* EDIT BOX */
+.cj2-edit-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cj2-edit-input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #e0d3ff;
+}
+
+.cj2-save-btn {
+  background: #530df7;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ANIMATIONS */
+.animate-cj2-slideDown {
+  animation: cj2SlideDown 0.8s ease forwards;
+}
+
+.animate-cj2-slideLeft {
+  animation: cj2SlideLeft 0.8s ease forwards;
+}
+
+.animate-cj2-slideRight {
+  animation: cj2SlideRight 0.8s ease forwards;
+}
+
+@keyframes cj2SlideDown {
+  0% { opacity: 0; transform: translateY(-18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cj2SlideLeft {
+  0% { opacity: 0; transform: translateX(-18px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes cj2SlideRight {
+  0% { opacity: 0; transform: translateX(18px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+/* =========================================================
+   MOBILE VIEW ONLY – CJ2
+========================================================= */
+@media screen and (max-width: 768px) {
+
+  /* PAGE WRAPPER */
+  .cj2-wrapper {
+    padding: 20px 16px !important;
+  }
+
+  /* PAGE TITLE */
+  .cj2-heading {
+    font-size: 28px !important;
+    margin-bottom: 22px !important;
+    text-align: center;
+  }
+
+  /* MAIN LAYOUT */
+  .cj2-layout {
+    flex-direction: column !important;
+    gap: 26px !important;
+  }
+
+  /* FORM CARD */
+  .cj2-form-card {
+    padding: 20px !important;
+  }
+
+  /* INPUTS */
+  .cj2-input,
+  .cj2-textarea,
+  .cj2-select {
+    font-size: 14px !important;
+    padding: 12px !important;
+  }
+
+  /* BUTTON ROW */
+  .cj2-btn-row {
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+
+  .cj2-draft-btn,
+  .cj2-publish-btn {
+    width: 100% !important;
+    padding: 14px !important;
+  }
+
+  /* PREVIEW CARD */
+  .cj2-preview-card {
+    width: 100% !important;
+  }
+
+  .cj2-preview-title {
+    text-align: center;
+  }
+
+  /* PREVIEW BOX */
+  .cj2-preview-box {
+    padding: 16px !important;
+  }
+
+  .cj2-preview-job-title {
+    font-size: 16px !important;
+  }
+
+  /* STATUS BADGE */
+  .cj2-status-badge {
+    position: static !important;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  /* ICONS */
+  .cj2-preview-icons {
+    justify-content: space-between;
+  }
+
+  /* EDIT BOX */
+  .cj2-edit-box {
+    gap: 8px !important;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media screen and (max-width: 480px) {
+
+  .cj2-heading {
+    font-size: 24px !important;
+  }
+
+  .cj2-preview-icons span {
+    font-size: 17px !important;
+  }
+}

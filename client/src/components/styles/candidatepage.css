@@ -1,0 +1,178 @@
+/* WRAPPER */
+/* WRAPPER */
+.cand-wrapper {
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+  background: #f3f1ff;
+  height: 60vh;
+  overflow-y: auto;
+
+  /* Hide scrollbar - Firefox & IE */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* Internet Explorer */
+}
+
+/* Hide scrollbar - Chrome, Safari, Edge */
+.cand-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* TITLE */
+.cand-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* FILTER ROW */
+.cand-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cand-search-input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid #d7c8ff;
+  width: 220px;
+  outline: none;
+}
+
+.cand-chip {
+  padding: 8px 16px;
+  border-radius: 18px;
+  background: #ece7ff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cand-chip-active {
+  background: #530df7;
+  color: white;
+}
+
+/* TABLE */
+.cand-table-container {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 22px rgba(83, 13, 247, 0.15);
+}
+
+.cand-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cand-table th {
+  text-align: left;
+  padding: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.cand-table td {
+  padding: 13px;
+  color: #555;
+  border-top: 1px solid #eee;
+}
+
+.cand-name {
+  font-weight: 600;
+}
+
+.cand-score {
+  font-weight: 700;
+}
+
+/* STATUS BADGES */
+.cand-status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: white;
+}
+
+.cand-status-violet {
+  background: #530df7;
+}
+
+.cand-status-green {
+  background: #2ecc71;
+}
+
+.cand-status-blue {
+  background: #3498db;
+}
+
+/* ACTION BUTTONS */
+.cand-action-btn {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border: none;
+  background: #f1ecff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cand-menu-btn {
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* POPUP */
+.cand-popup {
+  position: absolute;
+  right: 60px;
+  top: 160px;
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(83, 13, 247, 0.25);
+}
+
+.cand-popup-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cand-popup-item {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.cand-popup-close {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-top { animation: fadeUp 0.4s ease both; }
+.animate-up { animation: fadeUp 0.5s ease both; }
+.animate-fade { animation: fadeUp 0.6s ease both; }
+
+@keyframes popupAnim {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-popup { animation: popupAnim 0.35s ease-out; }

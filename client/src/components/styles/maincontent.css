@@ -1,0 +1,130 @@
+/* ===============================
+   MAIN WRAPPER
+================================ */
+.hfdb-main-wrapper {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: #f4f6fb;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   LOADING / ERROR
+================================ */
+.hfdb-loading-text,
+.hfdb-error-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 40px;
+  color: #555;
+}
+
+/* ===============================
+   USER CARD
+================================ */
+.hfdb-user-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.hfdb-user-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.hfdb-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hfdb-user-text {
+  font-size: 15px;
+  color: #475569;
+}
+
+.hfdb-label {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.hfdb-status-pass {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* ===============================
+   STATS GRID
+================================ */
+.hfdb-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.hfdb-stat-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.hfdb-stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.hfdb-stat-title {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.hfdb-stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.hfdb-stat-status-pass {
+  font-size: 24px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.hfdb-stat-status-fail {
+  font-size: 24px;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+/* ===============================
+   RESUME CARD
+================================ */
+.hfdb-resume-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.hfdb-resume-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.hfdb-resume-text {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+}

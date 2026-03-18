@@ -1,0 +1,177 @@
+/* =========================
+   PAGE
+========================= */
+.au-page {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  animation: auFadeIn 0.6s ease;
+}
+
+.au-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+.au-toolbar {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.au-search-input,
+.au-role-select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(79, 141, 255, 0.6);
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.au-search-input:focus,
+.au-role-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+}
+
+/* =========================
+   TABLE
+========================= */
+.au-table-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+}
+
+.au-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.au-thead {
+  background: #f1f5f9;
+}
+
+.au-table th,
+.au-table td {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.au-row {
+  transition: background 0.25s ease;
+}
+
+.au-row:hover {
+  background: #f9fafb;
+}
+
+.au-role {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+/* =========================
+   STATUS
+========================= */
+.au-status {
+  font-weight: 700;
+}
+
+.au-status-active {
+  color: #16a34a;
+}
+
+.au-status-blocked {
+  color: #dc2626;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.au-action-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.au-block {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.au-block:hover {
+  background: #fecaca;
+}
+
+.au-unblock {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.au-unblock:hover {
+  background: #bbf7d0;
+}
+
+/* =========================
+   EMPTY & LOADING
+========================= */
+.au-empty {
+  text-align: center;
+  padding: 30px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.au-loading {
+  padding: 80px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes auFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+@media (max-width: 768px) {
+  .au-toolbar {
+    flex-direction: column;
+  }
+
+  .au-title {
+    font-size: 22px;
+  }
+
+  .au-table th,
+  .au-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
