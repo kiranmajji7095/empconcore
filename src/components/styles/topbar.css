@@ -1,0 +1,164 @@
+/* ===============================
+   TOPBAR
+================================ */
+.topbar {
+  height: 150px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===============================
+   SEARCH
+================================ */
+.topbar-search {
+  width: 280px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  outline: none;
+}
+
+.topbar-search:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+/* ===============================
+   ACTIONS
+================================ */
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* ===============================
+   NOTIFICATION
+================================ */
+.topbar-notification {
+  position: relative;
+}
+
+.topbar-bell {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.topbar-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #116bc0;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+/* ===============================
+   PROFILE
+================================ */
+.topbar-profile {
+  position: relative;
+}
+
+.topbar-profile img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #6366f1;
+  cursor: pointer;
+}
+
+/* ===============================
+   POPUP COMMON
+================================ */
+.topbar-popup {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  width: 260px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  padding: 14px;
+  animation: popupFade 0.2s ease;
+  z-index: 10;
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   NOTIFICATION ITEMS
+================================ */
+.popup-item {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.popup-item:last-child {
+  border-bottom: none;
+}
+
+.popup-empty {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ===============================
+   PROFILE POPUP
+================================ */
+.profile-popup {
+  width: 200px;
+}
+
+.profile-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   LOGOUT
+================================ */
+.logout-btn {
+  width: 100%;
+  padding: 8px;
+  background: #116bc0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #116bc0;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .topbar-search {
+    display: none;
+  }
+}

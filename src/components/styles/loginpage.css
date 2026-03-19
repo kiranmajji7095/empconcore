@@ -1,0 +1,494 @@
+/* =====================================================
+   GLOBAL RESET & FONT
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* =====================================================
+   MAIN WRAPPER
+===================================================== */
+.vl-auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  transition: transform 1s ease;
+}
+
+/* =====================================================
+   BACKGROUND ROTATE WHEN REGISTER OPENS
+===================================================== */
+.rotate-bg {
+  animation: bgRotate 1s ease forwards;
+}
+
+@keyframes bgRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+
+/* =====================================================
+   LOGIN CARD
+===================================================== */
+.vl-auth-card {
+  background: #ffffff;
+  width: 420px;
+  padding: 42px 36px;
+  border-radius: 22px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  animation: scaleIn 0.45s ease;
+}
+
+/* Entry animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =====================================================
+   CARD TILT WHEN REGISTER OPENS
+===================================================== */
+.rotate-bg .vl-auth-card {
+  animation: cardTilt 0.8s ease forwards;
+}
+
+@keyframes cardTilt {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(-2deg) scale(0.97);
+  }
+  100% {
+    transform: rotate(-4deg) scale(0.94);
+  }
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+.vl-auth-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.vl-auth-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6366f1, #22c55e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.vl-auth-logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* =====================================================
+   TITLES
+===================================================== */
+.vl-auth-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.vl-auth-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+.vl-auth-input {
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.vl-auth-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+.vl-auth-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vl-auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.45);
+}
+
+.vl-auth-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+.vl-auth-error {
+  font-size: 14px;
+  color: #dc2626;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+/* =====================================================
+   LINKS
+===================================================== */
+.vl-auth-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.vl-auth-link {
+  font-size: 14px;
+  color: #4f46e5;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.vl-auth-link:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   BACKGROUND SHAPES
+===================================================== */
+.vl-auth-shape {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.shape-top {
+  top: -90px;
+  left: -90px;
+}
+
+.shape-bottom {
+  bottom: -90px;
+  right: -90px;
+}
+
+/* =====================================================
+   REGISTER OVERLAY
+===================================================== */
+.newuser-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* =====================================================
+   ROUND / CIRCULAR ENTRY ANIMATION
+===================================================== */
+.newuser-card {
+  animation: circleIn 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform-origin: center;
+}
+
+@keyframes circleIn {
+  0% {
+    transform: rotate(-180deg) scale(0.2) translateY(300px);
+    opacity: 0;
+  }
+  60% {
+    transform: rotate(10deg) scale(1.05) translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translateY(0);
+  }
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+@media (max-width: 480px) {
+  .vl-auth-card {
+    width: 100%;
+    padding: 36px 24px;
+    border-radius: 20px;
+  }
+
+  .vl-auth-title {
+    font-size: 24px;
+  }
+
+  .vl-auth-input {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .vl-auth-btn {
+    font-size: 17px;
+    padding: 15px;
+  }
+
+  .vl-auth-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .newuser-card {
+    animation: mobilePop 0.5s ease;
+  }
+
+  @keyframes mobilePop {
+    from {
+      transform: scale(0.85);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+/* ==============================
+   FORGOT PASSWORD OVERLAY
+============================== */
+.fp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fpFadeIn 0.3s ease;
+}
+
+@keyframes fpFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==============================
+   POPUP CARD
+============================== */
+.fp-card {
+  background: #ffffff;
+  width: 380px;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  position: relative;
+  animation: fpSlideUp 0.35s ease;
+}
+
+@keyframes fpSlideUp {
+  from {
+    transform: translateY(40px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ==============================
+   CLOSE BUTTON
+============================== */
+.fp-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #475569;
+  transition: color 0.2s ease;
+}
+
+.fp-close:hover {
+  color: #dc2626;
+}
+
+/* ==============================
+   TITLE
+============================== */
+.fp-card h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+/* ==============================
+   MESSAGE (ERROR / INFO)
+============================== */
+.fp-msg {
+  font-size: 14px;
+  text-align: center;
+  color: #dc2626;
+  margin-bottom: 12px;
+}
+
+/* ==============================
+   INPUT FIELDS
+============================== */
+.fp-card input {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.fp-card input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99,102,241,0.25);
+}
+
+/* ==============================
+   BUTTON
+============================== */
+.fp-card button {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fp-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(79,70,229,0.45);
+}
+
+/* ==============================
+   MOBILE VIEW
+============================== */
+@media (max-width: 480px) {
+  .fp-card {
+    width: 100%;
+    margin: 0 18px;
+    padding: 26px;
+  }
+
+  .fp-card h3 {
+    font-size: 18px;
+  }
+
+  .fp-card input {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .fp-card button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+/* ===============================
+   LOGIN PAGE – MOBILE VIEW
+================================ */
+@media (max-width: 480px) {
+
+  .vl-auth-wrapper {
+    padding: 16px;
+  }
+
+  .vl-auth-card {
+    width: 100%;
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .vl-auth-title {
+    font-size: 22px;
+  }
+
+  .vl-auth-input {
+    font-size: 16px;
+  }
+
+  .vl-auth-btn {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .vl-auth-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .fp-card {
+    width: 100%;
+    margin: 0 14px;
+  }
+}

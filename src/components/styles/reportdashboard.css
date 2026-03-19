@@ -1,0 +1,123 @@
+/* PAGE */
+.report-container {
+  min-height: 100vh;
+  background: #f4f6fb;
+  padding: 30px 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BACK BUTTON */
+.report-back-btn {
+  background: #fff;
+  border: 1px solid #7a5ef7;
+  color: #7a5ef7;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* TITLE */
+.report-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+/* DOWNLOAD BUTTON (NO SHAKE) */
+.report-download-btn {
+  background: linear-gradient(135deg, #6c63ff, #5a52e0);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: box-shadow 0.25s ease;
+}
+
+.report-download-btn:hover {
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.35);
+}
+
+/* GRID */
+.report-summary-grid,
+.report-charts-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* CARD */
+.report-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.report-card-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.report-card-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: #7a5ef7;
+}
+
+/* CHART SIZE FIX */
+.report-chart-card {
+  height: 300px;
+}
+
+.report-chart-card canvas {
+  max-height: 220px !important;
+}
+
+/* TABLE */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* MODAL */
+.report-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.report-modal {
+  background: #fff;
+  width: 340px;
+  padding: 22px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.report-modal button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.report-modal .cancel-btn {
+  background: #ffe4e4;
+  color: #c62828;
+}

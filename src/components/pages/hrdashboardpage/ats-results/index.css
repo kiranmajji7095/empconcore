@@ -1,0 +1,88 @@
+/* PAGE */
+.ats-page {
+  padding: 32px;
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.ats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ats-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* BACK BUTTON – FIXED */
+.ats-back-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 80px;
+  margin-left: 90%;
+}
+
+.ats-back-btn:hover {
+  background: #1d4ed8;
+}
+
+/* TABLE */
+.ats-table-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.ats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ats-table th,
+.ats-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.ats-table th {
+  background: #f1f5f9;
+  font-size: 14px;
+}
+
+/* SCORE BADGE */
+.ats-score {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.ats-score.high {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.ats-score.medium {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+/* EMPTY STATE */
+.ats-empty {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}

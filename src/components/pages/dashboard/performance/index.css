@@ -1,0 +1,254 @@
+.performance-wrapper {
+  padding: 20px;
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.chart-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+/* ==============================
+   PERFORMANCE WRAPPER
+============================== */
+.performance-wrapper {
+  padding: 24px;
+  background: #f8fafc; /* soft dashboard background */
+  min-height: calc(100vh - 60px);
+}
+
+.performance-wrapper h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   GRID LAYOUT
+============================== */
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ==============================
+   CHART CARD
+============================== */
+.chart-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 
+    0 10px 25px rgba(15, 23, 42, 0.05),
+    0 4px 10px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 18px 40px rgba(15, 23, 42, 0.08),
+    0 6px 14px rgba(15, 23, 42, 0.05);
+}
+
+/* ==============================
+   CARD HEADER
+============================== */
+.chart-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+/* ==============================
+   CHART ALIGNMENT
+============================== */
+.chart-card canvas {
+  max-width: 100% !important;
+  max-height: 260px !important;
+  margin: auto;
+  display: block;
+}
+
+/* ==============================
+   LOADING STATE
+============================== */
+.performance-wrapper p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .performance-wrapper {
+    padding: 16px;
+  }
+
+  .chart-card {
+    padding: 18px;
+  }
+
+  .performance-wrapper h2 {
+    font-size: 20px;
+  }
+}
+/* ===============================
+   PERFORMANCE PAGE – MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  .performance-wrapper {
+    padding: 16px !important;
+    min-height: auto !important;
+  }
+
+  .performance-wrapper h2 {
+    font-size: 20px !important;
+    text-align: center;
+  }
+
+  .performance-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .chart-card {
+    padding: 16px !important;
+  }
+
+  .chart-card h4 {
+    font-size: 14px !important;
+  }
+
+  .chart-card canvas {
+    max-height: 220px !important;
+  }
+}
+/* ==============================
+   PERFORMANCE WRAPPER
+============================== */
+.performance-wrapper {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: calc(100vh - 60px);
+}
+
+.performance-wrapper h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   GRID
+============================== */
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ==============================
+   CARD
+============================== */
+.chart-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.95),
+    rgba(255,255,255,0.85)
+  );
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.05),
+    0 4px 10px rgba(15, 23, 42, 0.04);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.08),
+    0 6px 14px rgba(15, 23, 42, 0.05);
+}
+
+.chart-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+/* ==============================
+   ATS CENTER SCORE
+============================== */
+.center-score {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* ==============================
+   BAR CHART
+============================== */
+.bar-wrapper {
+  height: 260px;
+}
+
+.score-label {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* ==============================
+   LOADING
+============================== */
+.performance-wrapper p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ==============================
+   MOBILE
+============================== */
+@media (max-width: 768px) {
+  .performance-wrapper {
+    padding: 16px;
+  }
+
+  .performance-wrapper h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .performance-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bar-wrapper {
+    height: 220px;
+  }
+}

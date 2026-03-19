@@ -1,0 +1,121 @@
+/* Page wrapper */
+.profile-page {
+  min-height: 100vh;
+  padding: 60px 30px;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Big profile card */
+.profile-card {
+  width: 680px;              /* ⬅ wider */
+  min-height: 520px;         /* ⬅ taller */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 44px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+/* Title */
+.profile-card h2 {
+  font-size: 30px;           /* ⬅ big heading */
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 28px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 14px;
+}
+
+/* Profile rows */
+.profile-card p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;           /* ⬅ big text */
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+/* Label */
+.profile-card p b {
+  font-size: 18px;
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Resume link */
+.profile-card a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 17px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.profile-card a:hover {
+  text-decoration: underline;
+}
+
+/* Big Edit button */
+.btn-edit {
+  margin-top: 30px;
+  width: 100%;
+  height: 56px;              /* ⬅ taller button */
+  font-size: 18px;
+  font-weight: 600;
+  background: #5c1bd4;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  transition: background 0.2s ease;
+}
+
+.btn-edit:hover {
+  background: #1e40af;
+}
+/* ===============================
+   PROFILE PAGE – MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  .profile-page {
+    padding: 30px 14px !important;
+    align-items: flex-start;
+  }
+
+  .profile-card {
+    width: 100% !important;
+    min-height: auto !important;
+    padding: 24px 20px !important;
+  }
+
+  .profile-card h2 {
+    font-size: 22px !important;
+    margin-bottom: 20px;
+  }
+
+  .profile-card p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 15px !important;
+  }
+
+  .profile-card p b {
+    font-size: 14px !important;
+  }
+
+  .profile-card a {
+    font-size: 15px;
+  }
+
+  .btn-edit {
+    height: 48px !important;
+    font-size: 16px !important;
+  }
+}

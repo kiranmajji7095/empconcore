@@ -1,0 +1,335 @@
+/* ==========================================================
+   CONTAINER + TITLE
+========================================================== */
+.uf-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.uf-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #4c2cff;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================
+   JOB PREVIEW BOX
+========================================================== */
+.uf-job-preview {
+  background: #f4f1ff;
+  border-left: 5px solid #4c2cff;
+  padding: 15px 18px;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.08);
+}
+
+.uf-job-preview h3 {
+  margin: 0;
+  color: #4c2cff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ==========================================================
+   FORM CARD
+========================================================== */
+.uf-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 22px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* width: 500px; */
+}
+
+/* ==========================================================
+   IMAGE UPLOAD
+========================================================== */
+.uf-image-section {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.uf-preview-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 80px;
+  object-fit: cover;
+  border: 3px solid #4c2cff;
+}
+
+.uf-placeholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 80px;
+  background: #eceaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4c2cff;
+  font-size: 14px;
+  border: 2px dashed #4c2cff;
+}
+
+.uf-file-input {
+  margin-top: 10px;
+}
+
+/* ==========================================================
+   INPUTS + SELECTS
+========================================================== */
+.uf-input,
+.uf-select,
+.uf-textarea {
+  width: 96%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #ddd7ff;
+  background: #fafaff;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.uf-input:focus,
+.uf-select:focus,
+.uf-textarea:focus {
+  border-color: #4c2cff;
+  box-shadow: 0 0 6px rgba(76, 44, 255, 0.35);
+}
+
+.uf-textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.uf-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   SUBMIT BUTTON
+========================================================== */
+.uf-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #4c2cff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.uf-submit-btn:hover {
+  background: #3a22d7;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+@media (max-width: 600px) {
+  .uf-card {
+    padding: 18px;
+  }
+}
+.ats-wrapper {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.ats-back-btn {
+  margin-bottom: 15px;
+  padding: 8px 15px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ats-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 450px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ats-title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.ats-score {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.ats-pass {
+  color: green;
+}
+
+.ats-fail {
+  color: red;
+}
+
+.ats-btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  font-size: 15px;
+  background: #530df7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ats-popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex; justify-content: center; align-items: center;
+}
+
+.ats-popup-box {
+  background: white;
+  width: 70%;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.ats-popup-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.ats-popup-data {
+  white-space: pre-wrap;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: "Courier New", monospace;
+  max-height: 60vh;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
+
+.ats-popup-download,
+.ats-popup-close {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #530df7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.uf-back-wrapper {
+  margin-bottom: 16px;
+}
+
+.uf-back-btn {
+  padding: 8px 18px;
+  background: transparent;
+  border: 2px solid #530df7;
+  color: #7a3fff;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 50px;
+}
+
+/* .uf-back-btn:hover {
+  text-decoration: underline;
+} */
+
+.uf-btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.uf-back-to-jobs-btn {
+  background: #ffffff;
+  border: 1.5px solid #5a2dfc;
+  color: #5a2dfc;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.uf-back-to-jobs-btn:hover {
+  background: #5a2dfc;
+  color: #ffffff;
+  transform: translateX(-3px);
+}
+
+.uf-back-to-jobs-btn:active {
+  transform: scale(0.96);
+}
+/* ===============================
+   USER LOGIN FORM – MOBILE
+================================ */
+@media (max-width: 600px) {
+
+  .uf-container {
+    padding: 12px;
+  }
+
+  .uf-title {
+    font-size: 22px;
+  }
+
+  .uf-card {
+    padding: 18px;
+  }
+
+  .uf-input,
+  .uf-select,
+  .uf-textarea {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .uf-image-section {
+    width: 120px;
+    height: 120px;
+  }
+
+  .uf-preview-image,
+  .uf-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .uf-btn-group {
+    flex-direction: column;
+  }
+
+  .uf-back-to-jobs-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
